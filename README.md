@@ -1,259 +1,318 @@
-# [App Name] Integration Documentation
+# HNG NestJS Boilerplate
 
-## Overview
+A comprehensive NestJS boilerplate application with authentication, user management, organization management, email functionality, and database integration. This project serves as a foundation for building scalable Node.js applications with TypeScript.
 
-[Description]
+## 🚀 Features
 
-## Folder Structure
+- **Authentication & Authorization**: JWT-based authentication with Passport.js
+- **User Management**: Complete user CRUD operations with profile management
+- **Organization Management**: Multi-tenant organization support
+- **Email System**: Nodemailer integration with Handlebars templates
+- **Database Integration**: TypeORM with PostgreSQL support
+- **API Documentation**: Swagger/OpenAPI documentation
+- **Logging**: Structured logging with Pino
+- **Validation**: Request validation with class-validator
+- **Testing**: Jest testing framework with e2e tests
+- **Code Quality**: ESLint, Prettier, and Husky for git hooks
+- **Database Migrations**: TypeORM migrations with seeding
+- **Health Checks**: Application health monitoring endpoints
 
-```
-|--- src
-|    |--- database
-|    |--- modules
-|    |--- shared
-|    |--- app.module.ts
-|    |--- main.ts
-|--- .env.local
-|--- .gitignore
-|--- package.json
-|--- tsconfig.json
-```
+## 🛠️ Tech Stack
 
-## Dependencies (Dev)
+- **Framework**: NestJS 10.x
+- **Language**: TypeScript 5.x
+- **Database**: PostgreSQL with TypeORM
+- **Authentication**: JWT with Passport.js
+- **Email**: Nodemailer with Handlebars templates
+- **Validation**: class-validator & class-transformer
+- **Documentation**: Swagger/OpenAPI
+- **Logging**: Pino
+- **Testing**: Jest
+- **Code Quality**: ESLint, Prettier, Husky
 
-- Node.js
-- TypeScript
-- Express
-- ts-node-dev
-- [Other dependencies including nestjs' dependencies]
+## 📋 Prerequisites
 
-## Getting Started
+Before you begin, ensure you have the following installed:
 
-Before you begin, ensure you have the following installed on your machine:
+- **Node.js** (v16 or later) - [Download here](https://nodejs.org/)
+- **npm** (Node Package Manager, included with Node.js)
+- **PostgreSQL** - [Download here](https://www.postgresql.org/download/)
+- **NestJS CLI** - Install globally: `npm install -g @nestjs/cli`
 
-- [Node.js](https://nodejs.org/) (v14 or later)
-- [npm](https://www.npmjs.com/) (Node Package Manager, included with Node.js)
-- [NestJs](https://docs.nestjs.com) (NestJS' Documentation)
-- [Git](https://git-scm.com/)
-
-## Setup Guide
-
-#### Detailed guide on setting and starting the Application
-
-- [Setup Guide](setup-guide.md)
-
-## Contribution Guide
-
-## Getting Started
-
-#### If you don't have git on your machine, [install it](https://docs.github.com/en/get-started/quickstart/set-up-git).
-
-## Fork this repository
-
-Fork this repository by clicking on the fork button on the top of this page.
-This will create a copy of this repository in your account.
-
-## Clone the repository
-
-<img align="right" width="300" src="https://firstcontributions.github.io/assets/Readme/clone.png" alt="clone this repository" />
-
-Now clone the forked repository to your machine. Go to your GitHub account, open the forked repository, click on the code button and then click the _copy to clipboard_ icon.
-
-Open a terminal and run the following git command:
-
-```bash
-git clone "url you just copied"
-```
-
-where "url you just copied" (without the quotation marks) is the url to this repository (your fork of this project). See the previous steps to obtain the url.
-
-<img align="right" width="300" src="https://firstcontributions.github.io/assets/Readme/copy-to-clipboard.png" alt="copy URL to clipboard" />
-
-For example:
-
-```bash
-git clone git@github.com:this-is-you/hng_project.git
-```
-
-where `this-is-you` is your GitHub username. Here you're copying the contents of the first-contributions repository on GitHub to your computer.
-
-## Create a branch
-
-Change to the repository directory on your computer (if you are not already there):
-
-```bash
-cd hng_project
-```
-
-Now create a branch using the `git switch` command:
-
-```bash
-git switch -c your-new-branch-name
-```
-
-For example:
-
-```bash
-git switch -c add-alonzo-church
-```
-
-### Make Changes
-
-Make your changes to the codebase. Ensure your code follows the project's coding standards and guidelines.
-
-### Run Tests
-
-Run the existing tests to ensure your changes do not break anything. If you added new functionality, write corresponding tests.
-
-```sh
-npm run test
-```
-
-## commit those changes
-
-Now open `Contributors.md` file in a text editor, add your name to it. Don't add it at the beginning or end of the file. Put it anywhere in between. Now, save the file.
-
-<img align="right" width="450" src="https://firstcontributions.github.io/assets/Readme/git-status.png" alt="git status" />
-
-If you go to the project directory and execute the command `git status`, you'll see there are changes.
-
-Add those changes to the branch you just created using the `git add` command:
-
-## Push changes to GitHub
-
-Push your changes using the command `git push`:
-
-```bash
-git push -u origin your-branch-name
-```
-
-replacing `your-branch-name` with the name of the branch you created earlier.
-
-<details>
-<summary> <strong>If you get any errors while pushing, click here:</strong> </summary>
-
-- ### Authentication Error
-     <pre>remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
-  remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
-  fatal: Authentication failed for 'https://github.com/<your-username>/first-contributions.git/'</pre>
-  Go to [GitHub's tutorial](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) on generating and configuring an SSH key to your account.
-
-</details>
-
-## Submit your changes for review into Staging
-
-If you go to your repository on GitHub, you'll see a `Compare & pull request` button. Click on that button.
-
-<img style="float: right;" src="https://firstcontributions.github.io/assets/Readme/compare-and-pull.png" alt="create a pull request" />
-
-Now submit the pull request.
-
-<img style="float: right;" src="https://firstcontributions.github.io/assets/Readme/submit-pull-request.png" alt="submit pull request" />
-
-Soon your changes will be merged into the staging branch of this project. You will get a notification email once the changes have been merged.
-
-## Setup Instructions
+## 🚀 Quick Start
 
 ### 1. Clone the Repository
 
-First, clone the repository to your local machine using Git.
-
-```sh
-git clone https://github.com/your-username/[app-name].git
-cd [app-name]
+```bash
+git clone https://github.com/hngprojects/hng_boilerplate_nestjs.git
+cd hng_boilerplate_nestjs
 ```
 
 ### 2. Install Dependencies
 
-Navigate to the project directory and install the required dependencies.
-
-```sh
+```bash
 npm install
 ```
 
-### 3. Configure Environment Variables
+### 3. Environment Configuration
 
-Create a `.env` file in the root directory of the project and add your environment-specific variables. You can use the provided `.env.example` file as a reference.
+Create environment files based on your profile:
 
-```sh
-cp .env.example .env
+```bash
+# For local development
+cp .env.example .env.local
+
+# For other environments
+cp .env.example .env.development
+cp .env.example .env.production
 ```
 
-Edit the `.env` file to match your environment configuration.
+Configure your environment variables:
 
-### 4. Compile TypeScript
+```env
+PROFILE=local
+NODE_ENV=development
+PORT=3008
 
-Compile the TypeScript code to JavaScript.
+# Database Configuration
+DB_TYPE=postgres
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+DB_HOST=localhost
+DB_DATABASE=your_database_name
+DB_ENTITIES=dist/**/*.entity{.ts,.js}
+DB_MIGRATIONS=dist/db/migrations/*{.ts,.js}
 
-```sh
+# JWT Configuration
+JWT_SECRET=your_jwt_secret_key
+JWT_EXPIRES_IN=24h
+
+# SMTP Configuration (for email functionality)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_email@gmail.com
+SMTP_PASSWORD=your_app_password
+```
+
+### 4. Database Setup
+
+Ensure PostgreSQL is running and create your database:
+
+```sql
+CREATE DATABASE your_database_name;
+```
+
+### 5. Run Migrations
+
+```bash
+# Generate migrations (if needed)
+npm run migration:generate
+
+# Run migrations
+npm run migration:run
+```
+
+### 6. Start the Application
+
+```bash
+# Development mode with hot reload
+npm run start:dev
+
+# Production mode
+npm run start:prod
+```
+
+The application will be available at `http://localhost:3008`
+
+## 📁 Project Structure
+
+```
+src/
+├── app.module.ts                 # Main application module
+├── main.ts                      # Application entry point
+├── health.controller.ts         # Health check endpoints
+├── database/
+│   ├── data-source.ts          # Database configuration
+│   └── seeding/                # Database seeding
+├── entities/
+│   └── base.entity.ts          # Base entity class
+├── guards/
+│   └── auth.guard.ts           # Authentication guard
+├── helpers/
+│   ├── custom-http-filter.ts   # HTTP exception filter
+│   ├── skipAuth.ts             # Skip authentication decorator
+│   └── SystemMessages.ts       # System message constants
+├── modules/
+│   ├── auth/                   # Authentication module
+│   ├── user/                   # User management module
+│   ├── organisations/          # Organization management module
+│   └── email/                  # Email functionality module
+└── shared/
+    └── inteceptors/
+        └── response.interceptor.ts  # Response interceptor
+```
+
+## 🔧 Available Scripts
+
+### Development
+- `npm run start:dev` - Start development server with hot reload
+- `npm run start:debug` - Start with debug mode
+- `npm run dev` - Start with ts-node-dev for development
+
+### Production
+- `npm run build` - Build the application
+- `npm run start:prod` - Start production server
+
+### Database
+- `npm run migration:generate` - Generate new migration
+- `npm run migration:run` - Run pending migrations
+- `npm run migration:revert` - Revert last migration
+- `npm run seed` - Run database seeding
+
+### Testing
+- `npm run test` - Run unit tests
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:cov` - Run tests with coverage
+- `npm run test:e2e` - Run end-to-end tests
+
+### Code Quality
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
+- `npm run check-format` - Check code formatting
+- `npm run check-lint` - Check linting rules
+
+## 🔌 API Endpoints
+
+### Health Check
+- `GET /` - Application home
+- `GET /health` - Health check endpoint
+- `GET /api/v1` - API version info
+
+### Authentication
+- `POST /api/v1/auth/register` - User registration
+- `POST /api/v1/auth/login` - User login
+
+### Users
+- `GET /api/v1/users` - Get all users (protected)
+- `GET /api/v1/users/:id` - Get user by ID (protected)
+
+### Organizations
+- `GET /api/v1/organisations` - Get all organizations (protected)
+- `POST /api/v1/organisations` - Create organization (protected)
+
+### Seeding
+- `GET /api/v1/seed/users` - Get seeded user data
+
+## 📚 API Documentation
+
+Once the application is running, you can access the Swagger API documentation at:
+
+```
+http://localhost:3008/api/docs
+```
+
+## 🧪 Testing
+
+The project includes comprehensive testing setup:
+
+### Unit Tests
+```bash
+npm run test
+```
+
+### E2E Tests
+```bash
+npm run test:e2e
+```
+
+### Test Coverage
+```bash
+npm run test:cov
+```
+
+## 🔐 Authentication
+
+The application uses JWT-based authentication:
+
+1. **Register**: Create a new user account
+2. **Login**: Authenticate and receive JWT token
+3. **Protected Routes**: Include JWT token in Authorization header
+
+Example usage:
+```bash
+# Login
+curl -X POST http://localhost:3008/api/v1/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": "user@example.com", "password": "password"}'
+
+# Use protected endpoint
+curl -X GET http://localhost:3008/api/v1/users \
+  -H "Authorization: Bearer YOUR_JWT_TOKEN"
+```
+
+## 📧 Email Functionality
+
+The application includes email functionality with:
+
+- **Templates**: Handlebars-based email templates
+- **SMTP Integration**: Configurable SMTP settings
+- **Email Types**: Confirmation, newsletter, password reset, waitlist
+
+## 🗄️ Database
+
+### Entities
+- **User**: User accounts with profiles
+- **Organization**: Multi-tenant organizations
+- **Base Entity**: Common fields (id, timestamps)
+
+### Migrations
+- Automatic migration generation
+- Migration versioning
+- Rollback support
+
+### Seeding
+- Automatic data seeding on startup
+- Sample user data
+- Test data generation
+
+## 🚀 Deployment
+
+### Environment Variables
+Ensure all required environment variables are set for your deployment environment.
+
+### Database
+- Run migrations: `npm run migration:run`
+- Ensure database connection is properly configured
+
+### Build & Start
+```bash
 npm run build
+npm run start:prod
 ```
 
-### 5. Run the Development Server
+## 🤝 Contributing
 
-Start the development server with the following command. This will also watch for any changes in your code and automatically restart the server.
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Submit a pull request
 
-```sh
-npm run dev
-```
+## 📄 License
 
-### 6. Run the Production Server
+This project is licensed under the UNLICENSED license.
 
-To run the application in a production environment, use the following command:
+## 🆘 Support
 
-```sh
-npm run start
-```
+For support and questions:
+- Check the [setup guide](setup-guide.md) for detailed setup instructions
+- Review the [wiki documentation](wiki_readme/) for additional resources
+- Open an issue on GitHub
 
-### 7. Verify the Setup
+## 🔄 Version History
 
-Open your browser and navigate to `http://localhost:3000/api/v1/` to verify that the application is running correctly.
+- **v0.0.1** - Initial boilerplate with authentication, user management, and database integration
 
-## Folder Structure
+---
 
-Here's an overview of the project's folder structure:
-
-```
-|--- src
-|    |--- controllers
-          |--- v1
-|    |--- database
-|    |--- interfaces
-|    |--- middlewares
-|    |--- routes
-|         |--- v1
-|    |--- services
-|    |--- utils
-|    |--- server.ts
-|--- .env
-|--- app.ts
-|--- .gitignore
-|--- package.json
-|--- tsconfig.json
-```
-
-## Scripts
-
-Here are some useful npm scripts that you can use during development and production:
-
-- `npm run build`: Compiles the TypeScript code to JavaScript.
-- `npm run start:dev`: Starts the development server with live reloading.
-- `npm run start`: Starts the production server.
-- `npm run test`: Runs the test suite (if available).
-- `npm run lint`: Runs the linter to check for code style issues.
-
-## Additional Resources
-
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
-- [Express Documentation](https://expressjs.com/)
-
-By following these steps, you should have your Node.js and TypeScript application up and running. If you encounter any issues, please refer to the documentation of the respective tools or seek help from the community.
-
-## API Endpoints
-
-All API endpoints can be referenced in the [API Reference](API_REFERENCE.md) document.
-
-## Versioning
-
-This project is versioned to ensure backward compatibility and easy maintenance. The current version is [version].
+**Happy Coding! 🚀**
